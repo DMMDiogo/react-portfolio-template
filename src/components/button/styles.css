@@ -1,0 +1,8 @@
+.cube {
+    background-color: aqua;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    width: 150px;
+    position: absolute;
+}
+
