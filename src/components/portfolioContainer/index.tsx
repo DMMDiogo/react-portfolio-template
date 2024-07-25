@@ -40,7 +40,7 @@ const dataPortfolio = [
 ];
 
 function PortfolioContainer() {
-    // Create an array of refs for each project
+    
     const parentRefs = useRef([]);
     const circleRefs = useRef([]);
     const triangleRefs = useRef([]);
@@ -60,6 +60,17 @@ function PortfolioContainer() {
             const circleRef = circleRefs.current[i];
             const triangleRef = triangleRefs.current[i];
             const squareTwoRef = squareTwoRefs.current[i];
+
+
+            {/*  Aqui a minha ideia seria criar um if o useState é true acrescenta o estilo ao cursor
+                se não, não acrescenta..E como adiciona o estilo ao cursor diretamente? */}
+
+                if(setButton(true)){
+
+                }
+                else if (setButton(false)){
+
+                }
 
 
             gsap.fromTo(circleRef.current, {
@@ -153,7 +164,8 @@ function PortfolioContainer() {
                         setButton(true)
                     }} onMouseOut={() => {
                         setButton(false)
-                    }}>
+                    }}> {/*  Quero uma simples animação de cursor onde quando ele entra o cursor ganha "estilos" 
+                    sendo que o estilo que ganha é o .button*/}
                         <div className="circle" ref={circleRefs.current[i]}>
                             <img className="phoneImage" src={phoneImage} alt="Phone" />
                         </div>
